@@ -1,0 +1,73 @@
+﻿@model ThikanaClassifieds.Models.Classifieds_Items
+@{
+    ViewBag.Title = "DeleteCategoryItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifieds_Item_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifieds_Item_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifieds_Item_Titel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifieds_Item_Titel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifieds_Item_Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifieds_Item_Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifieds_Item_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifieds_Item_Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Its_Premium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Its_Premium)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifieds_Item_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifieds_Item_Description)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "ClassifiedsCategoryData")
+        </div>
+    }
+</div>

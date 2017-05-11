@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ThikanaClassifieds.Models.Classifieds_Category>
+@{
+    ViewBag.Title = "ClassifiedsCategoryData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="clildren-table">
+    <h2>Category List</h2>
+    <table class="table">
+        <tr>
+            <th>
+               Category ID
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Image
+            </th>  
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    
+                    @Html.DisplayFor(modelItem=>item.Classifieds_Category_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classifieds_Category_Name)                    
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem=>item.Classifieds_Category_Image)
+                </td>                
+                <td>
+                    @Html.ActionLink("Edit", "EditCategory", new { id = item.Classifieds_Category_Id }, new { @class = "edita" })                    
+                    @Html.ActionLink("Delete", "DeleteCategory", new { id = item.Classifieds_Category_Id }, new { @class = "deletea" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

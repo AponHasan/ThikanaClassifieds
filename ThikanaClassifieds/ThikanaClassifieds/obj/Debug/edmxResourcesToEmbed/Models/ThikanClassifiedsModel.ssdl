@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThikanaclassifiedsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Classifieds_Category">
+    <Key>
+      <PropertyRef Name="Classifieds_Category_Id" />
+    </Key>
+    <Property Name="Classifieds_Category_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Classifieds_Category_Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Classifieds_Category_Image" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Classifieds_Item_Image">
+    <Key>
+      <PropertyRef Name="Classifieds_Item_Image_Id" />
+    </Key>
+    <Property Name="Classifieds_Item_Image_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Classifieds_Item_Id" Type="int" Nullable="false" />
+    <Property Name="Classifieds_Item_Image" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Classifieds_Items">
+    <Key>
+      <PropertyRef Name="Classifieds_Item_Id" />
+    </Key>
+    <Property Name="Classifieds_Item_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Classifieds_Category_Id" Type="int" Nullable="false" />
+    <Property Name="Classifieds_Item_Titel" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Classifieds_Item_Location" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Classifieds_Item_Price" Type="nvarchar" MaxLength="500" />
+    <Property Name="Its_Premium" Type="nvarchar" MaxLength="500" />
+    <Property Name="Classifieds_Item_Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="test">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="img1" Type="nvarchar(max)" />
+    <Property Name="img2" Type="nvarchar(max)" />
+    <Property Name="img3" Type="nvarchar(max)" />
+    <Property Name="img4" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Classifieds_Item_Image_Classifieds_Items">
+    <End Role="Classifieds_Items" Type="Self.Classifieds_Items" Multiplicity="1" />
+    <End Role="Classifieds_Item_Image" Type="Self.Classifieds_Item_Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classifieds_Items">
+        <PropertyRef Name="Classifieds_Item_Id" />
+      </Principal>
+      <Dependent Role="Classifieds_Item_Image">
+        <PropertyRef Name="Classifieds_Item_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classifieds_Items_Classifieds_Category">
+    <End Role="Classifieds_Category" Type="Self.Classifieds_Category" Multiplicity="1" />
+    <End Role="Classifieds_Items" Type="Self.Classifieds_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classifieds_Category">
+        <PropertyRef Name="Classifieds_Category_Id" />
+      </Principal>
+      <Dependent Role="Classifieds_Items">
+        <PropertyRef Name="Classifieds_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ThikanaclassifiedsModelStoreContainer">
+    <EntitySet Name="Classifieds_Category" EntityType="Self.Classifieds_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classifieds_Item_Image" EntityType="Self.Classifieds_Item_Image" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classifieds_Items" EntityType="Self.Classifieds_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Classifieds_Item_Image_Classifieds_Items" Association="Self.FK_Classifieds_Item_Image_Classifieds_Items">
+      <End Role="Classifieds_Items" EntitySet="Classifieds_Items" />
+      <End Role="Classifieds_Item_Image" EntitySet="Classifieds_Item_Image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classifieds_Items_Classifieds_Category" Association="Self.FK_Classifieds_Items_Classifieds_Category">
+      <End Role="Classifieds_Category" EntitySet="Classifieds_Category" />
+      <End Role="Classifieds_Items" EntitySet="Classifieds_Items" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

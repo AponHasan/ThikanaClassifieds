@@ -1,0 +1,287 @@
+﻿@*@model ThikanaClassifieds.ViewModel.ItemAddViewModel*@
+@model ThikanaClassifieds.Models.Classifieds_Category
+
+@{
+    ViewBag.Title = "AddItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .img_prev {
+        width: 100%;
+    }
+
+    .nicEdit-main {
+        font-family: 'kalpurush';
+    }
+</style>
+@section scripts{
+    <script>
+
+        $("#add_more").click(function (e) {
+            $("#file_slab").append("<div class='form-group'><label for='inputEmail3' class='col-sm-2 control-label'>Images</label>" +
+                    "<div class='col-sm-2'><img src='' class='img_prev' /></br> <a href='javascript:;' onclick='RemoveFile(this)'>Remove</a></div><div class='col-sm-4'><input type='file' name='file1' onchange='readURL(this)' /></div>");
+            e.preventDefault();
+        });
+        function RemoveFile(e) {
+            $(e).closest(".form-group").remove();
+        }
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = new Image();
+                    img.src = e.target.result;
+                    var height = img.naturalHeight;
+                    var width = img.naturalWidth;
+                    var aspect = width / height;
+                    {
+                        $(input).closest('.form-group').find('.img_prev').attr('src', e.target.result);
+                    }                  
+                  
+                }
+                reader.readAsDataURL(input.files[0]);
+
+            }
+        }
+
+       
+        //$(function () {
+        //    Date.prototype.toDateInputValue = (function () {
+        //        var local = new Date(this);
+        //        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        //        return local.toJSON().slice(0, 10);
+        //    });
+        //    $("input[name=Publication_Date]").val(new Date().toDateInputValue());
+        //});
+        //$("select.sec[name=Section_ID]").change(function () {
+
+        //    $.get("/admin/getSubSectionBySction/" + $(this).val(), function (result) {
+        //        $("#subsec").html(result);
+        //    })
+        //});
+        @*</script>
+    <script src="~/Content/TreePlugIn/JtreeSettings.js"></script>
+    <script src="~/Content/TextAreaFormatter/nicEdit.js"></script>
+    <script>
+        $(document).ready(function () {
+            var t = $("#tree");
+            $.get("/admin/getNewsTree", function (zNodes) {
+                t = $.fn.zTree.init(t, setting, zNodes);
+                var zTree = $.fn.zTree.getZTreeObj("tree");
+                zTree.expandAll(true);
+            })
+
+            $("form").validate();
+            new nicEditor({ fullPanel: true }).panelInstance('News_Description');
+        });*@
+    </script>
+
+
+
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+           Upload Classifieds Item
+        </h1>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Select Category</label>
+                <div class="col-sm-4">
+                 
+                  @Html.DropDownListFor(model => model.Classifieds_Category_Id, @ViewBag.CategoryId as SelectList, "Select Category", new { @class = " inputfil" })
+
+                 </div>
+
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label ">Item Title</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control required" id="inputEmail3" name="Classifieds_Item_Titel" placeholder="Title">
+                   
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label ">Item Location</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control required" id="inputEmail3" name="Classifieds_Item_Location" placeholder="Loacation">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label ">Item Prices</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control required" id="inputEmail3" name="Classifieds_Item_Price" placeholder="Item Price">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label ">Is Premium</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="inlineFormCustomSelect" name="Its_Premium">
+                        <option selected>Select ..</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+                </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" rows="3" name="Classifieds_Item_Description" placeholder="Description"></textarea>
+                </div>
+
+            </div>
+
+            <div id="file_slab">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Images</label>
+                    <div class="col-sm-2">
+                        <img src="" class="img_prev" />
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="file" name="file1" class="first" onchange="readURL(this)" />
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="javascript:;" id="add_more">Add more</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="form-group">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <input type="submit" name="upload" value="Upload" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+    @*<div class="col-sm-12">
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    @Html.Partial("_PartialTree")
+                </div>
+            </div>
+        </div>*@
+
+</div>
+
+<!-- Modal -->
+@*<div class="modal fade" id="EditionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Publish New Edition</h4>
+                </div><form action="/admin/CreateEdition/" method="post" class="form-horizontal">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Current Edition</label>
+                            <div class="col-sm-8">
+
+                                @if (currentEdi != null)
+                                {
+                                    <input type="text" class="form-control" disabled value="@currentEdi.Edition_Name">
+                                }
+                                else
+                                {
+                                    <input type="text" class="form-control" disabled value="None">
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">New Edition</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control required" name="Edition_Name" value="@Model.NextEdition">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">English Date</label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control required" name="Publication_Date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Publish</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>*@
+@*<div class="modal fade" id="SectionModal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create New Section</h4>
+                </div>
+                <form action="/admin/CreateSection" method="post" class="form-horizontal">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class=" pull-left control-label">Section Name</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control required" placeholder="Section Name" name="Section_Name">
+                            </div>
+                            <div class="col-sm-2">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="true" name="is_menu_item">Is Menu Item
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>*@
+@*<div class="modal fade" id="SubSectionModal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create New Section</h4>
+                </div>
+                <form action="/Admin/CreateSubSection" method="post" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Section Name</label>
+                            <div class="col-sm-8">
+                                @Html.DropDownList("Section_ID", Model.NewsSection.Select(i => new SelectListItem() { Text = i.Section_Name, Value = i.Section_ID.ToString() }), new { @class = "form-control required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Sub Section Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control required" placeholder="Sub Section Name" name="Sub_Section_Name">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>*@
