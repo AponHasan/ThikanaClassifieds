@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ThikanaClassifieds.Models.Classifieds_Items>
+@{
+    ViewBag.Title = "ClassifiedsItemData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="clildren-table">
+    <h2>Category List</h2>
+    <table class="table">
+        <tr>
+            <th>
+                Item ID
+            </th>
+            <th>
+                Item Name
+            </th>
+            <th>
+               Item Location
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Item Price
+            </th>
+            <th>
+                Premium
+            </th>
+            <th>
+                Description
+            </th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Classifieds_Item_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classifieds_Item_Titel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classifieds_Item_Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classifieds_Item_Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Its_Premium)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classifieds_Item_Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditItems", new { id = item.Classifieds_Item_Id }, new { @class = "edita" })
+                    @Html.ActionLink("Delete", "DeleteCategoryItem", new { id = item.Classifieds_Item_Id }, new { @class = "deletea" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

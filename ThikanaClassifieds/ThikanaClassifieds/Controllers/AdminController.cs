@@ -38,20 +38,11 @@ namespace ThikanaClassifieds.Controllers
                 }
                 db.Classifieds_Category.Add(category);
                 db.SaveChanges();
-            }
-     
+            }    
             return View();
         }
         
-
-
         //classified category function end
-
-
-
-
- 
-
 
         //Classified category id selected drop down function start
         private void CategoryIDDropDownList(object selectedCategory = null)
@@ -79,6 +70,7 @@ namespace ThikanaClassifieds.Controllers
             return View("DeleteCategory", CCategory);
         }
 
+        
       
         [HttpPost, ActionName("DeleteCategory")]
         public ActionResult Delete_Confirm(int id)
@@ -101,18 +93,15 @@ namespace ThikanaClassifieds.Controllers
             return View(CCategory);
         }
 
-
-        //Edit Category Item
+        //Classified Category Edit
         public ActionResult EditCategory(int id)
         {
-           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
             }
             Classifieds_Category CCategory = db.Classifieds_Category.Find(id);
-
             if (CCategory == null)
             {
                 return HttpNotFound();
@@ -132,6 +121,25 @@ namespace ThikanaClassifieds.Controllers
             return View(CCategory);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
 
 
         //Classifide items function start
@@ -160,9 +168,69 @@ namespace ThikanaClassifieds.Controllers
             return View();
         }
 
+        //Classified Category Item data Retrive
         public ActionResult ClassifiedsItemData()
         {
             return View(db.Classifieds_Items.ToList().OrderByDescending(j => j.Classifieds_Item_Id).ThenByDescending(l => l.Classifieds_Item_Id));
+        }
+
+        //Classified Category Itemdelete Function
+        public ActionResult DeleteCategoryItem(int id)
+        {
+
+            Classifieds_Items CItem = db.Classifieds_Items.SingleOrDefault(ci => ci.Classifieds_Item_Id == id);
+            return View("DeleteCategoryItem", CItem);
+          
+        }
+
+        [HttpPost, ActionName("DeleteCategoryItem")]
+        public ActionResult Delete_Confirms(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Classifieds_Items CItem = db.Classifieds_Items.Find(id);
+            if (CItem == null)
+            {
+                return HttpNotFound();
+            }
+            if (CItem != null)
+            {
+                db.Classifieds_Items.Remove(CItem);
+                db.SaveChanges();
+                return RedirectToAction("ClassifiedsItemData");
+            }
+            return View(CItem);
+        }
+
+        //Classified Category Items Edit
+        public ActionResult EditItems(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            }
+            Classifieds_Items CItem = db.Classifieds_Items.Find(id);
+            if (CItem == null)
+            {
+                return HttpNotFound();
+            }
+            return View(CItem);
+        }
+
+        [HttpPost]
+        public ActionResult EditItems(Classifieds_Items CItem)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(CItem).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ClassifiedsItemData");
+            }
+            return View(CItem);
         }
 	}
 }

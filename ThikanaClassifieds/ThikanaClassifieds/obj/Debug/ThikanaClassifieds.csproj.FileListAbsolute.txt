@@ -44,3 +44,25 @@ C:\Users\IT LANDERS\Downloads\ThikanaClassifieds\ThikanaClassifieds\bin\System.W
 C:\Users\IT LANDERS\Downloads\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
 C:\Users\IT LANDERS\Downloads\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
 C:\Users\IT LANDERS\Downloads\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll.config
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.pdb
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\Microsoft.Web.Infrastructure.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
+E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb

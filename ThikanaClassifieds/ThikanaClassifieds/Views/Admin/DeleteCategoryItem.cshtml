@@ -10,20 +10,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Classifieds_Item_Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Classifieds_Item_Id)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Classifieds_Item_Titel)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Classifieds_Item_Titel)
         </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Classifieds_Item_Location)
         </dt>
@@ -32,18 +25,18 @@
             @Html.DisplayFor(model => model.Classifieds_Item_Location)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Classifieds_Item_Price)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Classifieds_Item_Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Its_Premium)
@@ -59,6 +52,7 @@
         <dd>
             @Html.DisplayFor(model => model.Classifieds_Item_Description)
         </dd>
+
     </dl>
 
     @using (Html.BeginForm())
@@ -67,7 +61,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "ClassifiedsCategoryData")
+            @Html.ActionLink("Back to List", "ClassifiedsItemData")
         </div>
     }
 </div>

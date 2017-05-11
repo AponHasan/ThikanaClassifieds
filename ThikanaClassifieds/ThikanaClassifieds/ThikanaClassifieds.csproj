@@ -196,7 +196,9 @@
     <Content Include="Views\Admin\ClassifiedsCategoryData.cshtml" />
     <Content Include="Views\Admin\DeleteCategory.cshtml" />
     <Content Include="Views\Admin\EditCategory.cshtml" />
+    <Content Include="Views\Admin\ClassifiedsItemData.cshtml" />
     <Content Include="Views\Admin\DeleteCategoryItem.cshtml" />
+    <Content Include="Views\Admin\EditItems.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
