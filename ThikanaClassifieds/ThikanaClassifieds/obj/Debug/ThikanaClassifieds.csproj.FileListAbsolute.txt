@@ -66,3 +66,26 @@ E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages
 E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
 E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
 E:\My Work .net\TC\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll.config
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.pdb
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\Microsoft.Web.Infrastructure.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.csprojResolveAssemblyReference.cache
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb

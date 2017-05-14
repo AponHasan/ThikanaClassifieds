@@ -31,7 +31,7 @@
                     @Html.DisplayFor(modelItem => item.Classifieds_Category_Name)                    
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem=>item.Classifieds_Category_Image)
+                    <img src='~/@Html.DisplayFor(modelItem => item.Classifieds_Category_Image)' height="45px" />
                 </td>                
                 <td>
                     @Html.ActionLink("Edit", "EditCategory", new { id = item.Classifieds_Category_Id }, new { @class = "edita" })                    

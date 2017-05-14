@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -68,29 +67,39 @@ namespace ThikanaClassifieds.Controllers
         {
             Classifieds_Category CCategory = db.Classifieds_Category.SingleOrDefault(c => c.Classifieds_Category_Id == id);
             return View("DeleteCategory", CCategory);
-        }
-
-        
+        }        
       
         [HttpPost, ActionName("DeleteCategory")]
         public ActionResult Delete_Confirm(int id)
         {
-            if (id == null)
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Classifieds_Category CCategory = db.Classifieds_Category.Find(id);
+            //if (CCategory == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //if (CCategory != null)
+            //{
+            //    db.Classifieds_Category.Remove(CCategory);
+            //    db.SaveChanges();
+            //    return RedirectToAction("ClassifiedsCategoryData");
+            //}
+            //return View(CCategory);
+            Classifieds_Items Citem = db.Classifieds_Items.Include(i => i.Classifieds_Item_Image).Where(i => i.Classifieds_Item_Id == id).Single();
+
+            db.Classifieds_Items.Remove(Citem);
+
+            var Cii = db.Classifieds_Item_Image.Where(d => d.Classifieds_Item_Id == id).SingleOrDefault();
+            if (Cii != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Cii.Classifieds_Item_Image1 = null;
             }
-            Classifieds_Category CCategory = db.Classifieds_Category.Find(id);
-            if (CCategory == null)
-            {
-                return HttpNotFound();
-            }
-            if (CCategory != null)
-            {
-                db.Classifieds_Category.Remove(CCategory);
-                db.SaveChanges();
-                return RedirectToAction("ClassifiedsCategoryData");
-            }
-            return View(CCategory);
+
+            db.SaveChanges();
+            return RedirectToAction("ClassifiedsCategoryData");
         }
 
         //Classified Category Edit
@@ -180,29 +189,31 @@ namespace ThikanaClassifieds.Controllers
 
             Classifieds_Items CItem = db.Classifieds_Items.SingleOrDefault(ci => ci.Classifieds_Item_Id == id);
             return View("DeleteCategoryItem", CItem);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Classifieds_Items CItem = db.Classifieds_Items.Find(id);
+            //if (CItem == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(CItem);
           
         }
 
         [HttpPost, ActionName("DeleteCategoryItem")]
         public ActionResult Delete_Confirms(int id)
-        {
-            if (id == null)
+        {       
+                var Citem = db.Classifieds_Items.Find(id);
+            foreach(var item in Citem.Classifieds_Item_Image.ToList())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                FileUploader.DeleteFile(this.ControllerContext, item.Classifieds_Item_Image1);
+                db.Classifieds_Item_Image.Remove(item);
             }
-
-            Classifieds_Items CItem = db.Classifieds_Items.Find(id);
-            if (CItem == null)
-            {
-                return HttpNotFound();
-            }
-            if (CItem != null)
-            {
-                db.Classifieds_Items.Remove(CItem);
-                db.SaveChanges();
-                return RedirectToAction("ClassifiedsItemData");
-            }
-            return View(CItem);
+            db.Classifieds_Items.Remove(Citem);
+            db.SaveChanges();
+            return RedirectToAction("ClassifiedsItemData");
         }
 
         //Classified Category Items Edit

@@ -43,36 +43,7 @@
 
             }
         }
-        //$(function () {
-        //    Date.prototype.toDateInputValue = (function () {
-        //        var local = new Date(this);
-        //        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-        //        return local.toJSON().slice(0, 10);
-        //    });
-        //    $("input[name=Publication_Date]").val(new Date().toDateInputValue());
-        //});
-        //$("select.sec[name=Section_ID]").change(function () {
-
-        //    $.get("/admin/getSubSectionBySction/" + $(this).val(), function (result) {
-        //        $("#subsec").html(result);
-        //    })
-        //});
-        @*</script>
-    <script src="~/Content/TreePlugIn/JtreeSettings.js"></script>
-    <script src="~/Content/TextAreaFormatter/nicEdit.js"></script>
-    <script>
-        $(document).ready(function () {
-            var t = $("#tree");
-            $.get("/admin/getNewsTree", function (zNodes) {
-                t = $.fn.zTree.init(t, setting, zNodes);
-                var zTree = $.fn.zTree.getZTreeObj("tree");
-                zTree.expandAll(true);
-
-            })
-
-            $("form").validate();
-            new nicEditor({ fullPanel: true }).panelInstance('News_Description');
-        });*@
+        
     </script>
 
 
@@ -111,7 +82,6 @@
                 </div>
             </div>
 
-
             <div class="form-group">
                 <div class="col-sm-6 col-sm-offset-3 text-center">
                     <input type="submit" name="upload" value="Upload" />
@@ -119,123 +89,5 @@
             </div>
       </form>
 </div>
-    @*<div class="col-sm-12">
-            <div class="panel panel-danger">
-                <div class="panel-body">
-                    @Html.Partial("_PartialTree")
-                </div>
-            </div>
-        </div>*@
 
 </div>
-
-<!-- Modal -->
-@*<div class="modal fade" id="EditionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Publish New Edition</h4>
-                </div><form action="/admin/CreateEdition/" method="post" class="form-horizontal">
-                    <div class="modal-body">
-
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">Current Edition</label>
-                            <div class="col-sm-8">
-
-                                @if (currentEdi != null)
-                                {
-                                    <input type="text" class="form-control" disabled value="@currentEdi.Edition_Name">
-                                }
-                                else
-                                {
-                                    <input type="text" class="form-control" disabled value="None">
-                                }
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">New Edition</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control required" name="Edition_Name" value="@Model.NextEdition">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">English Date</label>
-                            <div class="col-sm-8">
-                                <input type="date" class="form-control required" name="Publication_Date">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Publish</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>*@
-@*<div class="modal fade" id="SectionModal" tabindex="-1" role="dialog" aria-labelledby="">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Create New Section</h4>
-                </div>
-                <form action="/admin/CreateSection" method="post" class="form-horizontal">
-                    <div class="modal-body">
-
-                        <div class="form-group">
-                            <label for="inputEmail3" class=" pull-left control-label">Section Name</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control required" placeholder="Section Name" name="Section_Name">
-                            </div>
-                            <div class="col-sm-2">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="true" name="is_menu_item">Is Menu Item
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>*@
-@*<div class="modal fade" id="SubSectionModal" tabindex="-1" role="dialog" aria-labelledby="">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Create New Section</h4>
-                </div>
-                <form action="/Admin/CreateSubSection" method="post" class="form-horizontal">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">Section Name</label>
-                            <div class="col-sm-8">
-                                @Html.DropDownList("Section_ID", Model.NewsSection.Select(i => new SelectListItem() { Text = i.Section_Name, Value = i.Section_ID.ToString() }), new { @class = "form-control required" })
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-4 control-label">Sub Section Name</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control required" placeholder="Sub Section Name" name="Sub_Section_Name">
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="submit" onclick="$('.required').removeClass('required')" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>*@
