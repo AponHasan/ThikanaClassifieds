@@ -1,0 +1,209 @@
+﻿body {
+    background-color:#ededed;
+}
+.col-sm-12
+{
+    margin:0px;
+    padding:0px;
+}
+.header
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+    float:left;
+}
+
+.logo
+{
+    height:60px;
+    width:100%;
+    float:left;
+    margin-top:8px;
+}
+
+.logo img
+{
+    height:54px;
+    width:185px;
+}
+.headermenu
+{
+    margin-top:8px;
+}
+
+.login
+{
+    margin-top:22px;
+}
+.postAdd
+{
+    margin-top:13px;
+}
+
+
+.footerWrapper
+{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:14px;
+	height:auto;	
+	background: #848080; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#f9eded, #8e8c8c);
+	padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 5px 0px 0 0px;
+    color:#000;
+}
+.bottom-img
+{
+	height:auto;
+	width:100%;
+	margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 2px;
+    padding-top: 2px;
+}
+.bottom-img img
+{
+	height:100px;
+	width:100%;
+}
+
+.bottom-about
+{
+	font-size:23px;
+	color:black;
+	text-align:center;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    margin-top: 30px;
+    margin-bottom: 7px
+}
+
+.bottom-about a
+{
+	text-decoration:none;
+	color:black;
+}
+
+
+
+.bottom-about a:hover
+{
+	color:white;
+	text-decoration:none;
+}
+.bottom-about a:focus
+{
+	color:black;
+	text-decoration:none;
+	border:none;
+	outline:none;
+	outline-offset:none;
+}
+
+.bottom-contac
+{
+	color:black;
+	padding-top: 3px;
+    padding-bottom: 1px;
+}
+
+.bottom-contac h3
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	text-align:center;
+	font-size:20px;
+}
+
+.bottom-contac p
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	text-align:center;
+	font-size:12px
+}
+
+.bottom-footer
+{
+	background-color:#ddd;
+	color:black;
+	text-align:center;
+}
+.bottom-footer img
+{
+	height:15px;
+	width:20px
+}
+
+.bottom-footer a
+{
+	color:#104e10;
+	text-decoration:none;
+}
+
+.bottom-footer a:hover
+{
+	color:#067b06;
+}
+#p1
+{
+	
+    font-size: 13px;
+    font-weight: bold;
+    color: saddlebrown;
+}
+
+#p2
+{
+	
+    font-size: 13px;
+    font-weight: bold;
+    color: saddlebrown;
+}
+
+.english-font{
+     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.control-label.text-left{
+    text-align:left;
+    padding-right:0;
+}
+
+.titledesign
+{
+    width:100%;
+    height:auto;
+    background-color:gray;
+    color: #fff;
+    background-color: #606061;
+    background: -webkit-linear-gradient(#B9B9BF, #606061);
+    
+
+}
+
+.addimg img
+{
+    width: 80%;
+    height: 140px;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+.startupmodelimg img {
+    width: 100%;
+}
+
+.modal-content
+{
+    height:600px;
+}
+.modal-body
+{
+    height:450px;
+    overflow:auto;
+}

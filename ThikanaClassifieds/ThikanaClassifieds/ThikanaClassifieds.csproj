@@ -96,20 +96,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\Adspage.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\index.css" />
+    <Content Include="Content\css\layout.css" />
+    <Content Include="Content\css\layoutpage1.css" />
+    <Content Include="Content\css\ViewAds.css" />
+    <Content Include="Content\img\AdsImg\car.jpg" />
+    <Content Include="Content\img\AdsImg\guitar.jpg" />
+    <Content Include="Content\img\AdsImg\laptop.jpg" />
+    <Content Include="Content\img\AdsImg\lava-a67-dual-sim-android-mobile-phone-medium_3a86d70832ad27694f49cea1aba8dd81.jpg" />
+    <Content Include="Content\img\categoryimg\bird.png" />
+    <Content Include="Content\img\categoryimg\car.png" />
+    <Content Include="Content\img\categoryimg\dress.png" />
+    <Content Include="Content\img\categoryimg\driver.png" />
+    <Content Include="Content\img\categoryimg\furniture.png" />
+    <Content Include="Content\img\categoryimg\index.png" />
+    <Content Include="Content\img\driver.png" />
+    <Content Include="Content\img\etc.png" />
+    <Content Include="Content\img\Facebook.png" />
+    <Content Include="Content\img\house rent.png" />
+    <Content Include="Content\img\Household.png" />
+    <Content Include="Content\img\img1\002.jpg" />
+    <Content Include="Content\img\img1\003.jpg" />
+    <Content Include="Content\img\img1\004.jpg" />
+    <Content Include="Content\img\img1\005.jpg" />
+    <Content Include="Content\img\img1\006.jpg" />
+    <Content Include="Content\img\img1\007.jpg" />
+    <Content Include="Content\img\img1\008.jpg" />
+    <Content Include="Content\img\img1\009.jpg" />
+    <Content Include="Content\img\img1\010.jpg" />
+    <Content Include="Content\img\img1\011.jpg" />
+    <Content Include="Content\img\img1\a02.png" />
+    <Content Include="Content\img\img1\icon_chrome.png" />
+    <Content Include="Content\img\img1\loading.gif" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\logo2.png" />
+    <Content Include="Content\img\marige.jpg" />
+    <Content Include="Content\img\ned.png" />
+    <Content Include="Content\img\office rent.jpg" />
+    <Content Include="Content\img\ren.jpg" />
+    <Content Include="Content\img\roo1 %282%29.jpg" />
+    <Content Include="Content\img\room rent.png" />
+    <Content Include="Content\img\roommate.png" />
+    <Content Include="Content\img\sale.jpg" />
+    <Content Include="Content\img\twiter.png" />
+    <Content Include="Content\img\WeAre.jpg" />
+    <Content Include="Content\img\YouTube.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <EntityDeploy Include="Models\ThikanClassifiedsModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ThikanClassifiedsModel.Designer.cs</LastGenOutput>
@@ -127,6 +169,10 @@
       <DependentUpon>ThikanClassifiedsModel.edmx</DependentUpon>
       <LastGenOutput>ThikanClassifiedsModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -141,6 +187,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jssor.slider-23.1.0.min.js" />
+    <Content Include="Scripts\jssor.slider-23.1.6.min.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
@@ -188,6 +236,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\FileUploader.cs" />
     <Compile Include="ViewModel\ItemAddViewModel.cs" />
+    <Compile Include="ViewModel\Page1ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -199,6 +248,11 @@
     <Content Include="Views\Admin\ClassifiedsItemData.cshtml" />
     <Content Include="Views\Admin\DeleteCategoryItem.cshtml" />
     <Content Include="Views\Admin\EditItems.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Home\Adspage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ViewAds.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,8 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Image\Item\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

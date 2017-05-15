@@ -1,0 +1,16 @@
+﻿.ads2
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+}
+.adsimg2
+{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.adsimg2 img
+{
+    height:180px;
+    width:100%;
+}

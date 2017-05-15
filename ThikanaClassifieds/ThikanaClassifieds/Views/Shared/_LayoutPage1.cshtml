@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Content/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <link href="~/Content/css/layout.css" rel="stylesheet" />
+    <link href="~/Content/css/layoutpage1.css" rel="stylesheet" />
+    <link href="~/Content/css/Adspage.css" rel="stylesheet" />
+    <link href="~/Content/css/ViewAds.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jssor.slider-23.1.6.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <div class="header">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <img src="~/Content/img/logo.png" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="headermenu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="">Home</a>
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">category <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Page 1-1</a></li>
+                                            <li><a href="#">Page 1-2</a></li>
+                                            <li><a href="#">Page 1-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">All Ads</a></li>
+                                    <li><a href="#">Help / Support</a></li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="login">
+                        <a href="">Login</a>
+                        /
+                        <a href="">Register</a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="postAdd">
+                        <button type="button" class="btn btn-primary">Post ur Ads</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-12" style="background-color: gray; padding-top: 5%; padding-bottom: 5%; margin-top: 2%; ">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Select Category</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Contains</a></li>
+                            <li><a href="#its_equal">It's equal</a></li>
+                            <li><a href="#greather_than">Greather than ></a></li>
+                            <li><a href="#less_than">Less than < </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Select Area</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Contains</a></li>
+                            <li><a href="#its_equal">It's equal</a></li>
+                            <li><a href="#greather_than">Greather than ></a></li>
+                            <li><a href="#less_than">Less than < </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">SEARCH</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-3">
+            <div class="left-menu">
+                <div class="MenuLeftHeader">
+                    All Categories
+                </div>
+
+                <ul>
+                    <li><a href="#home">Cars & Vehicles (1298)</a></li>
+                    <li><a href="#news">Electrics & Gedgets (76212)</a></li>
+                    <li><a href="#contact">Real Estate (212)</a></li>
+                    <li><a href="#about">Sports & Games (972)</a></li>
+                    <li><a href="#home">Fshion & Beauty (1298)</a></li>
+                    <li><a href="#news">Pets & Animals (76212)</a></li>
+                    <li><a href="#contact">Home Appliances (1298)</a></li>
+                    <li><a href="#about">Matrimony Services (76212)</a></li>
+                    <li><a href="#home">Music & Arts (212)</a></li>
+                    <li><a href="#news">Miscellaneous (1298)</a></li>
+                    <li><a href="#contact">Job Openings (124)</a></li>
+                    <li><a href="#about">Books & Magazines (972)</a></li>
+                </ul>
+            </div>
+            <div class="leftdrop">
+                <div class="dropdown1">
+                    <button class="dropbtn1">Condition</button>
+                    <div class="dropdown-content1">
+                        <a href="#"><label><input type="checkbox" value="">New</label></a>
+                        <a href="#"><label><input type="checkbox" value="">used</label></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="leftdrop">
+                <div class="dropdown1">
+                    <button class="dropbtn1">Posted By</button>
+                    <div class="dropdown-content1">
+                        <a href="#"><label><input type="checkbox" value="">Individual</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Dealer</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Reseller</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Manufacturer</label></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leftdrop">
+                <div class="dropdown1">
+                    <button class="dropbtn1">Brand</button>
+                    <div class="dropdown-content1">
+                        <a href="#"><label><input type="checkbox" value="">Apple</label></a>
+                        <a href="#"><label><input type="checkbox" value="">HTC</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Micromax</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Nokia</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Samsung</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Acer</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Blackberry</label></a>
+                        <a href="#"><label><input type="checkbox" value="">Others</label></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <footer class="footerWrapper">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="bottom-img">
+
+                            <img src="~/Content/img/logo.png" />
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <div class="bottom-about">
+                            <a href="#" data-toggle="modal" data-target="#myModal">আমাদের সম্পর্কে </a>
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title" style="font-size: 35px;">আমাদের সম্পর্কে</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            @*<p>Under Constraction</p>*@
+                                            <div class="startupmodelimg">
+
+                                                <img src="~/Content/img/WeAre.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-7">
+                        <div class="bottom-contac">
+                            <h3>যোগাযোগ</h3>
+                            <p id="p2">Corporate Headquarter: </p>
+                            <p>
+                                Thikana: 45-02, 11th street, L.I.C. NY-11101,Ph: 718-872-0070, 718-472-2482,
+                                718-729-6000, 011-880-2-9665090<br />
+                                Email: wthikana@aol.com, thikana.group@gmail.com Fax: 718-361-5356
+                            </p>
+                            <p id="p1">Bangladesh Bureau:</p>
+                            <p>Thikana: 70/B, Green Road, (Panthapath), 1st Floor, Dhaka- 1205 Bangladesh.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="bottom-footer">
+                            Design & Development By:  <a href="http://itlanders.com/"><img src="~/SiteImage/leafletlogo.png" />It Landers Ltd </a>2017
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.intellisense.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.slim.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jssor.slider-23.1.6.min.js"></script>>
+</body>
+</html>

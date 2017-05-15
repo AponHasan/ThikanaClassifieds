@@ -1,0 +1,38 @@
+﻿.viewslide img
+{
+    height:250px;
+}
+
+.adsinfo
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+}
+
+.description
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+    margin-top:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.recomand
+{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.adscontuct
+{
+    margin-bottom:15px;
+}

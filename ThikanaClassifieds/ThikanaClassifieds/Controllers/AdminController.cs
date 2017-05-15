@@ -72,34 +72,34 @@ namespace ThikanaClassifieds.Controllers
         [HttpPost, ActionName("DeleteCategory")]
         public ActionResult Delete_Confirm(int id)
         {
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Classifieds_Category CCategory = db.Classifieds_Category.Find(id);
-            //if (CCategory == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //if (CCategory != null)
-            //{
-            //    db.Classifieds_Category.Remove(CCategory);
-            //    db.SaveChanges();
-            //    return RedirectToAction("ClassifiedsCategoryData");
-            //}
-            //return View(CCategory);
-            Classifieds_Items Citem = db.Classifieds_Items.Include(i => i.Classifieds_Item_Image).Where(i => i.Classifieds_Item_Id == id).Single();
-
-            db.Classifieds_Items.Remove(Citem);
-
-            var Cii = db.Classifieds_Item_Image.Where(d => d.Classifieds_Item_Id == id).SingleOrDefault();
-            if (Cii != null)
+            if (id == null)
             {
-                Cii.Classifieds_Item_Image1 = null;
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            Classifieds_Category CCategory = db.Classifieds_Category.Find(id);
+            if (CCategory == null)
+            {
+                return HttpNotFound();
+            }
+            if (CCategory != null)
+            {
+                db.Classifieds_Category.Remove(CCategory);
+                db.SaveChanges();
+                return RedirectToAction("ClassifiedsCategoryData");
+            }
+            return View(CCategory);
+            //Classifieds_Items Citem = db.Classifieds_Items.Include(i => i.Classifieds_Item_Image).Where(i => i.Classifieds_Item_Id == id).Single();
 
-            db.SaveChanges();
-            return RedirectToAction("ClassifiedsCategoryData");
+            //db.Classifieds_Items.Remove(Citem);
+
+            //var Cii = db.Classifieds_Item_Image.Where(d => d.Classifieds_Item_Id == id).SingleOrDefault();
+            //if (Cii != null)
+            //{
+            //    Cii.Classifieds_Item_Image1 = null;
+            //}
+
+            //db.SaveChanges();
+            //return RedirectToAction("ClassifiedsCategoryData");
         }
 
         //Classified Category Edit

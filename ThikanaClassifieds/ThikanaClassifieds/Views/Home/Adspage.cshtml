@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Object>
+@{
+    List<ThikanaClassifieds.Models.Classifieds_Category> CCategory = Model.ToList()[0] as List<ThikanaClassifieds.Models.Classifieds_Category>;
+    List<ThikanaClassifieds.Models.Classifieds_Items> CItems = Model.ToList()[1] as List<ThikanaClassifieds.Models.Classifieds_Items>;
+   
+    ViewBag.Title = "Adspage";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+    <div class="ads2">
+        @foreach(var item in CItems)
+        {
+        <div class="col-sm-3">
+            <div class="adsimg2">
+                <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="ads1txt">
+                <h4>$@item.Classifieds_Item_Price</h4>
+                <h3>@item.Classifieds_Item_Titel</h3>
+                <p id="1">@item.Classifieds_Item_Location</p>
+            </div>
+            <div class="adstime">
+                <p>@item.Date</p>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+

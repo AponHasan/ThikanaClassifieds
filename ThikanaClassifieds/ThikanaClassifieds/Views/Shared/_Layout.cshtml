@@ -1,68 +1,190 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <style>
-        .col-sm-2, .col-sm-12 {
-            margin: 0px 0px 0px 0px;
-            padding: 0px 0px 0px 0px;
-        }
-        .classifiedadminleftpanel ul li a {
-            font-size: 15px;
-            font-weight:bold;
-        }
-        .classifiedadminleftpanel 
-        {
-            padding-top:20px;
-        }
-
-            .classifiedadminleftpanel ul li {
-                list-style-type: none;
-                
-                margin: 0;
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
-    </style>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/layout.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="ClassifiedHead" style="width: 100%; height: 30px; background-color: #e8e8e8; text-align:right">
-        <a href="">Logout</a>
-    </div>
-    <div class="col-sm-12">
-        <div class="col-sm-2">
-            <div class="classifiedadminleftpanel" style="background-color: #e8e8e8; height:625px;">
-                <ul >
-                    <li><a   href="/Admin/ClassifiedsItemData">Home Page</a></li>
-                    <li><a  href="/Admin/ClassifiedCategory">Create Category</a></li>
-                    <li><a href="/Admin/ClassifiedsCategoryData">Category List</a></li>
-                    <li><a  href="/Admin/ClassifiedItem">Add Items</a></li>
-                    <li><a target="_blank" href="http://thikana.us/admin/login"> Thikana Admin</a></li>
-                </ul>
+    <script src="js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function () {
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $AutoPlaySteps: 4,
+                $SlideDuration: 160,
+                $SlideWidth: 200,
+                $SlideSpacing: 3,
+                $Cols: 4,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $Steps: 4
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $SpacingX: 1,
+                    $SpacingY: 1
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 809);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*responsive code end*/
+        };
+    </script>
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <div class="header">
+                <div class="col-sm-2">
+                    <div class="logo">
+                        <img src="~/Content/img/logo.png" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="headermenu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="~/Home/Index">Home</a>
+                                   
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">category <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Page 1-1</a></li>
+                                            <li><a href="#">Page 1-2</a></li>
+                                            <li><a href="#">Page 1-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">All Ads</a></li>
+                                    <li><a href="#">Help / Support</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="login">
+                        <a href="">Login</a>
+                        /
+                        <a href="">Register</a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="postAdd">
+                        <button type="button" class="btn btn-primary">Post ur Ads</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-sm-10">
-            @RenderBody()
-        </div>
-        <hr />
-        
     </div>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <footer class="footerWrapper">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="bottom-img">
+
+                            <img src="~/Content/img/logo.png" />
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <div class="bottom-about">
+                            <a href="#" data-toggle="modal" data-target="#myModal">আমাদের সম্পর্কে </a>
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title" style="font-size: 35px;">আমাদের সম্পর্কে</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            @*<p>Under Constraction</p>*@
+                                            <div class="startupmodelimg">
+
+                                                <img src="~/Content/img/WeAre.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-7">
+                        <div class="bottom-contac">
+                            <h3>যোগাযোগ</h3>
+                            <p id="p2">Corporate Headquarter: </p>
+                            <p>
+                                Thikana: 45-02, 11th street, L.I.C. NY-11101,Ph: 718-872-0070, 718-472-2482,
+                                718-729-6000, 011-880-2-9665090<br />
+                                Email: wthikana@aol.com, thikana.group@gmail.com Fax: 718-361-5356
+                            </p>
+                            <p id="p1">Bangladesh Bureau:</p>
+                            <p>Thikana: 70/B, Green Road, (Panthapath), 1st Floor, Dhaka- 1205 Bangladesh.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="bottom-footer">
+                            Design & Development By:  <a href="http://itlanders.com/"><img src="~/SiteImage/leafletlogo.png" />It Landers Ltd </a>2017
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
     <script src="~/Scripts/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.intellisense.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.slim.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jssor.slider-23.1.0.min.js"></script>
 </body>
 </html>

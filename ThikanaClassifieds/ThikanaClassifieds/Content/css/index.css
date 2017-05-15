@@ -1,0 +1,146 @@
+﻿.contbody
+{
+    height:auto;
+    width:100%;
+     background: -moz-linear-gradient(190deg, #95d8d1, #8ba8ae,#3a716f);
+     background: -o-linear-gradient(190deg, #95d8d1, #8ba8ae,#3a716f);
+     background: -webkit-linear-gradient(190deg, #95d8d1, #8ba8ae,#3a716f);
+     background: linear-gradient(190deg, #95d8d1, #8ba8ae,#3a716f);
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.contbody h1
+{
+    text-align:center;
+}
+.contbody h3
+{
+    text-align:center;
+}
+.contbody img
+{
+    width:40px;
+    height:40px;
+}
+
+.social
+{
+    margin-left:43%;
+    padding-bottom:20px;
+}
+
+
+.category
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+    margin-bottom:20px;
+}
+.category h3
+{
+    text-align:center;
+}
+.categoryinfo
+{
+    height:auto;
+    width:100%;
+}
+.categoryinfo img
+{
+    height: 100px;
+    width: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*padding-left: 16%;*/
+    margin-left: 30%;
+}
+
+.categoryinfo h4
+{
+    text-align:center;
+}
+.categoryinfo p
+{
+    text-align:center;
+}
+.category a:hover
+{
+    color:black;
+}
+
+
+.FeaturedAds1
+{
+    height:auto;
+    width:100%;
+    background-color:white;
+    margin-top:20px;
+}
+.FeaturedAds
+{
+    height:auto;
+    width:100%;
+    border-bottom:1px solid gray;
+}
+
+.FeaturedAds2
+{
+    height:auto;
+    width:100%;
+    border:1px solid #c8c4c4;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.FeaturedAds2 img
+{
+    width:100%;
+    height:180px;
+}
+.FeaturedAds2 h3
+{
+    margin-top:5px;
+}
+.FeaturedAds3
+{
+    height: 30px;
+    width: 100%;
+    background-color: #ededed;
+    border-top: 1px solid gray;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.ads1
+{
+    height:auto;
+    width:100%;
+
+
+}
+
+.ads1img img
+{
+    height:180px;
+    width:100%;
+}
+.ads1txt
+{
+    height:150px;
+    width:100%;
+}
+.adstime
+{
+    height:30px;
+    width:100%;
+    background-color:#ededed;
+}
+
+
+
+.slider img
+{
+    width:200px;
+    height:175px;
+}
