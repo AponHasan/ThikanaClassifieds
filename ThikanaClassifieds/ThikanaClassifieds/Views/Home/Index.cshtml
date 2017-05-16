@@ -160,23 +160,30 @@
                 <div class="col-xs-8 col-xs-offset-2">
                     <div class="input-group">
                         <div class="input-group-btn search-panel">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            @*<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 <span id="search_concept">Filter by</span> <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
+                            </button>*@
+                            @*<ul class="dropdown-menu" role="menu">
                                 <li><a href="#contains">Contains</a></li>
                                 <li><a href="#its_equal">It's equal</a></li>
                                 <li><a href="#greather_than">Greather than ></a></li>
                                 <li><a href="#less_than">Less than < </a></li>
                                 <li class="divider"></li>
                                 <li><a href="#all">Anything</a></li>
-                            </ul>
+                            </ul>*@
                         </div>
-                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        @*<input type="hidden" name="search_param" value="all" id="search_param">
                         <input type="text" class="form-control" name="x" placeholder="Search term...">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">SEARCH</button>
-                        </span>
+                        </span>*@
+                        <div class="navbar-search" href="#">
+
+                            <form class="search-form" action="/home/searchResult" method="post">
+                                <button class="icon" type="submit"><i class="fa fa-search"></i></button>
+                                <input type="search" name="searchtext" id="search" placeholder="Search..." />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,7 +196,7 @@
     </div>
 
     <div class="col-sm-12" style="background-color:white;">
-        <div class="category">
+        <div class="category" id="2">
             @*<h3>Select Category</h3>*@
             @foreach(var item in CCategory)
             { 
@@ -333,36 +340,42 @@
         </div>
     </div>
 
+<div class="col-sm-1">
 
-        <div class="col-sm-12" style="background-color:white; margin-top:20px;">
-            <div class="FeaturedAds1">
-                <div class="FeaturedAds">
-                    <h3>Trending Ads</h3>
-                </div>
-                <div class="col-sm-12" style="border: 1px solid #c8c4c4; margin-top: 10px; margin-bottom: 10px;">
-                    <div class="ads1">
-                        @foreach(var item in CItems)
-                        { 
-                        <div class="col-sm-3">
+</div>
+<div class="col-sm-10">
+    <div class="col-sm-12" style="background-color:white; margin-top:20px;">
+        <div class="FeaturedAds1">
+            <div class="FeaturedAds">
+                <h3>Trending Ads</h3>
+            </div>
+            <div class="col-sm-12" style=" margin-top: 10px; margin-bottom: 10px;">
+                <div class="ads1">
+                    @foreach (var item in CItems)
+                    {
+                        
+                        <div class="col-sm-3 well">
                             <div class="ads1img">
                                 <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>
                             </div>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 well">
                             <div class="ads1txt">
-                                <h3>@item.Classifieds_Item_Price</h3>
+                                <h3>Price: $@item.Classifieds_Item_Price</h3>
                                 <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
-                                <p id="1">@item.Classifieds_Item_Location</p>
+                                <p id="1">Location: @item.Classifieds_Item_Location</p>
 
                             </div>
                             <div class="adstime">
                                 <p>@item.Date</p>
                             </div>
                         </div>
-                        }
-                    </div>
+                        
+                    }
                 </div>
-                @*<div class="col-sm-12" style="border: 1px solid #c8c4c4; margin-top: 10px; margin-bottom: 10px;">
+            </div>
+
+            @*<div class="col-sm-12" style="border: 1px solid #c8c4c4; margin-top: 10px; margin-bottom: 10px;">
                     <div class="ads1">
                         <div class="col-sm-3">
                             <div class="ads1img">
@@ -382,7 +395,26 @@
                     </div>
                 </div>*@
 
-            </div>
         </div>
     </div>
+
+</div>
+<div class="col-sm-1">
+
+</div>
+
+        
+    </div>
 <script type="text/javascript">jssor_1_slider_init();</script>
+<script>
+    $("input[name=searchtext]").on("keyup", function () {
+        $.post("/home/AutoSuggest", { searchtext: $("input[name=searchtext]").val() }, function (result) {
+            $("input[name=searchtext]").autocomplete({
+                minLength: 0,
+                source: result
+            }).autocomplete("search", "");
+        }, "json");
+    });
+
+
+</script>

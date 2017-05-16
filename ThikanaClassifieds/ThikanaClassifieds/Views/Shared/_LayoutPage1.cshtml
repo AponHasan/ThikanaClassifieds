@@ -15,8 +15,14 @@
     <link href="~/Content/css/ViewAds.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
     <script src="~/Scripts/jssor.slider-23.1.6.min.js"></script>
+
 </head>
 <body>
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
     <div class="container-fluid">
         <div class="col-sm-12">
             <div class="header">
@@ -25,37 +31,25 @@
                         <img src="~/Content/img/logo.png" />
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="headermenu">
+                <div class="col-sm-8">
+                    <div class="headermenu" >
                         <nav class="navbar navbar-default">
                             <div class="container-fluid">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="">Home</a>
+                                    <a class="navbar-brand" href="~/Home/Index">Home</a>
                                 </div>
                                 <ul class="nav navbar-nav">
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">category <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Page 1-1</a></li>
-                                            <li><a href="#">Page 1-2</a></li>
-                                            <li><a href="#">Page 1-3</a></li>
-                                        </ul>
+                                    <li>
+                                        <a class="navbar-brand" href="~/Home/Index#2">Category</a>
                                     </li>
                                     <li><a href="#">All Ads</a></li>
-                                    <li><a href="#">Help / Support</a></li>
-
+                                    <li><a href="#" onclick="goBack()">Back To Previous Page</a></li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="login">
-                        <a href="">Login</a>
-                        /
-                        <a href="">Register</a>
-                    </div>
-                </div>
+                
                 <div class="col-sm-2">
                     <div class="postAdd">
                         <button type="button" class="btn btn-primary">Post ur Ads</button>
@@ -105,71 +99,12 @@
 
 
     </div>
-    <div class="col-sm-12">
-        <div class="col-sm-3">
-            <div class="left-menu">
-                <div class="MenuLeftHeader">
-                    All Categories
-                </div>
-
-                <ul>
-                    <li><a href="#home">Cars & Vehicles (1298)</a></li>
-                    <li><a href="#news">Electrics & Gedgets (76212)</a></li>
-                    <li><a href="#contact">Real Estate (212)</a></li>
-                    <li><a href="#about">Sports & Games (972)</a></li>
-                    <li><a href="#home">Fshion & Beauty (1298)</a></li>
-                    <li><a href="#news">Pets & Animals (76212)</a></li>
-                    <li><a href="#contact">Home Appliances (1298)</a></li>
-                    <li><a href="#about">Matrimony Services (76212)</a></li>
-                    <li><a href="#home">Music & Arts (212)</a></li>
-                    <li><a href="#news">Miscellaneous (1298)</a></li>
-                    <li><a href="#contact">Job Openings (124)</a></li>
-                    <li><a href="#about">Books & Magazines (972)</a></li>
-                </ul>
-            </div>
-            <div class="leftdrop">
-                <div class="dropdown1">
-                    <button class="dropbtn1">Condition</button>
-                    <div class="dropdown-content1">
-                        <a href="#"><label><input type="checkbox" value="">New</label></a>
-                        <a href="#"><label><input type="checkbox" value="">used</label></a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="leftdrop">
-                <div class="dropdown1">
-                    <button class="dropbtn1">Posted By</button>
-                    <div class="dropdown-content1">
-                        <a href="#"><label><input type="checkbox" value="">Individual</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Dealer</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Reseller</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Manufacturer</label></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="leftdrop">
-                <div class="dropdown1">
-                    <button class="dropbtn1">Brand</button>
-                    <div class="dropdown-content1">
-                        <a href="#"><label><input type="checkbox" value="">Apple</label></a>
-                        <a href="#"><label><input type="checkbox" value="">HTC</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Micromax</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Nokia</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Samsung</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Acer</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Blackberry</label></a>
-                        <a href="#"><label><input type="checkbox" value="">Others</label></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-9">
+    
+        
             <div>
                 @RenderBody()
             </div>
-        </div>
+        
 
     </div>
     <div class="container-fluid">

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ThikanaClassifieds.Models.Classifieds_Items>
+@{
+    ViewBag.Title = "searchResult";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="news-box">
+                    <ul class="news-list double-col">
+
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                @if (item.Classifieds_Item_Image.FirstOrDefault() != null)
+                                {<div class="cover-image">
+                                    <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
+                                </div>
+                                }
+
+                                <h4 class="news-heading">
+                                    <a href="/home/ViewAds/@item.Classifieds_Item_Id">
+                                        @item.Classifieds_Item_Titel
+                                    </a>
+                                    <a href="home/ViewAds/@item.Classifieds_Item_Id">
+
+                                        - @item.Classifieds_Category.Classifieds_Category_Name
+                                    </a>
+                                </h4>
+                                <h5 class="news-date">@item.Date</h5>
+                                <p class="news-detail">
+                                    @item.Classifieds_Item_Description
+                                </p>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

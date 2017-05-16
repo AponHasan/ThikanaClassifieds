@@ -1,6 +1,5 @@
 ﻿@model ThikanaClassifieds.Models.Classifieds_Items
 @{
-    
     ViewBag.Title = "ViewAds";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
@@ -202,174 +201,242 @@
         height /**/: 72px;
     }
 </style>
-<div class="col-sm-12"style="background-color:white;height:auto;margin-top:20px;">
-    <div class="col-sm-6">
-        <div class="viewslide">
-            <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:800px;height:650px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-                <!-- Loading Screen -->
-                <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
-                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:530px;overflow:hidden;">
-                   @foreach(var item in Model.Classifieds_Item_Image)
-                   { 
-                     <div>
-                        <img data-u="image" src="~/@item.Classifieds_Item_Image1" />
-                         <img data-u="thumb" src="~/@item.Classifieds_Item_Image1" />
-                    </div>
-                    @*<div>
-                        <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
-                        <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
-                        <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
-                        <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
-                        <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
-                    </div>*@
-                   }
-  
-                    <a data-u="any" href="https://www.jssor.com" style="display:none">javascript slider</a>
+<div class="col-sm-12">
+    <div class="col-sm-1">
+        <div class="left-menu">
+            @*<div class="MenuLeftHeader">
+                All Categories
+            </div>
+
+            <ul>
+                
+                    <li><a href="#news">Electrics & Gedgets (76212)</a></li>
+                    <li><a href="#contact">Real Estate (212)</a></li>
+                    <li><a href="#about">Sports & Games (972)</a></li>
+                    <li><a href="#home">Fshion & Beauty (1298)</a></li>
+                    <li><a href="#news">Pets & Animals (76212)</a></li>
+                    <li><a href="#contact">Home Appliances (1298)</a></li>
+                    <li><a href="#about">Matrimony Services (76212)</a></li>
+                    <li><a href="#home">Music & Arts (212)</a></li>
+                    <li><a href="#news">Miscellaneous (1298)</a></li>
+                    <li><a href="#contact">Job Openings (124)</a></li>
+                    <li><a href="#about">Books & Magazines (972)</a></li>
+                
+            </ul>*@
+        </div>
+        <div class="leftdrop">
+            @*<div class="dropdown1">
+                <button class="dropbtn1">Condition</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">New</label></a>
+                    <a href="#"><label><input type="checkbox" value="">used</label></a>
+
                 </div>
-                <!-- Thumbnail Navigator -->
-                <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
-                    <!-- Thumbnail Item Skin Begin -->
-                    <div data-u="slides" style="cursor: default;">
-                        <div data-u="prototype" class="p">
-                            <div class="w">
-                                <div data-u="thumbnailtemplate" class="t"></div>
-                            </div>
-                            <div class="c"></div>
+            </div>*@
+        </div>
+        <div class="leftdrop">
+            @*<div class="dropdown1">
+                <button class="dropbtn1">Posted By</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">Individual</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Dealer</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Reseller</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Manufacturer</label></a>
+                </div>
+            </div>*@
+        </div>
+
+        <div class="leftdrop">
+            <div class="dropdown1">
+                @*<button class="dropbtn1">Brand</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">Apple</label></a>
+                    <a href="#"><label><input type="checkbox" value="">HTC</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Micromax</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Nokia</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Samsung</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Acer</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Blackberry</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Others</label></a>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <div class="col-sm-12" style="background-color:white;height:auto;margin-top:20px;">
+            <div class="col-sm-6">
+                <div class="viewslide">
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:800px;height:650px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:530px;overflow:hidden;">
+                            @foreach (var item in Model.Classifieds_Item_Image)
+                            {
+                                <div>
+                                    <img data-u="image" src="~/@item.Classifieds_Item_Image1" />
+                                    <img data-u="thumb" src="~/@item.Classifieds_Item_Image1" />
+                                </div>
+                                @*<div>
+                                    <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
+                                    <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
+                                    <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
+                                    <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/Content/img/AdsImg/car.jpg" />
+                                    <img data-u="thumb" src="~/Content/img/AdsImg/car.jpg" />
+                                </div>*@
+                            }
+
+                            <a data-u="any" href="https://www.jssor.com" style="display:none">javascript slider</a>
                         </div>
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+                            <!-- Thumbnail Item Skin Begin -->
+                            <div data-u="slides" style="cursor: default;">
+                                <div data-u="prototype" class="p">
+                                    <div class="w">
+                                        <div data-u="thumbnailtemplate" class="t"></div>
+                                    </div>
+                                    <div class="c"></div>
+                                </div>
+                            </div>
+                            <!-- Thumbnail Item Skin End -->
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+                        <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
                     </div>
-                    <!-- Thumbnail Item Skin End -->
                 </div>
-                <!-- Arrow Navigator -->
-                <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
-                <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+            </div>
+            <div class="col-sm-6">
+                <div class="adsinfo">
+                    <h3>Price: $@Model.Classifieds_Item_Price</h3>
+                    <h3>@Model.Classifieds_Item_Titel</h3>
+                    <p>Post Time: @Model.Date</p>
+                    <p>Location: @Model.Classifieds_Item_Location</p>
+                    @*<hr />
+                    <p><b>Condition:</b>New</p>
+                    <p><b>Brand:</b>Apple</p>
+                    <p><b>Features:</b>Camera, Dual SIM, GSM, Touch screen</p>
+                    <p><b>Model:</b>iPhone 6</p>*@
+                </div>
+                <div class="adscontuct">
+                    <button type="button" class="btn btn-warning">Click to show phone number</button>
+                    @*<button type="button" class="btn btn-primary">Reply by email</button>*@
+                </div>
             </div>
         </div>
+        <div class="col-sm-12">
+            <div class="description">
+                <h4>Description</h4><hr />
+                <p>@Model.Classifieds_Item_Description</p>
+            </div>
+        </div>
+
+        @*<div class="col-sm-12">
+            <div class="recomand">
+                <h4>Recommended Ads for You</h4><hr />
+            </div>
+        </div>*@
+
+        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+            <div class="ads2">
+                <div class="col-sm-3">
+                    <div class="adsimg2">
+                        <img src="~/Content/img/AdsImg/laptop.jpg" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+
+                    <div class="ads1txt">
+                        <h3>$3000.00</h3>
+                        <a href=""><h3>1933 Willy's</h3></a>
+                        <p id="1"><a href="">Electrics & Gedgets</a></p>
+
+                    </div>
+                    <div class="adstime">
+                        <p>7 jan 10:11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+            <div class="ads2">
+                <div class="col-sm-3">
+                    <div class="adsimg2">
+
+                        <img src="~/Content/img/AdsImg/guitar.jpg" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+
+                    <div class="ads1txt">
+                        <h3>$3000.00</h3>
+                        <a href=""><h3>1933 Willy's</h3></a>
+                        <p id="1"><a href="">Electrics & Gedgets</a></p>
+
+                    </div>
+                    <div class="adstime">
+                        <p>7 jan 10:11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+            <div class="ads2">
+                <div class="col-sm-3">
+                    <div class="adsimg2">
+
+                        <img src="~/Content/img/AdsImg/car.jpg" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+
+                    <div class="ads1txt">
+                        <h3>$3000.00</h3>
+                        <a href=""><h3>1933 Willy's</h3></a>
+                        <p id="1"><a href="">Electrics & Gedgets</a></p>
+
+                    </div>
+                    <div class="adstime">
+                        <p>7 jan 10:11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+            <div class="ads2">
+                <div class="col-sm-3">
+                    <div class="adsimg2">
+
+                        <img src="~/Content/img/AdsImg/lava-a67-dual-sim-android-mobile-phone-medium_3a86d70832ad27694f49cea1aba8dd81.jpg" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+
+                    <div class="ads1txt">
+                        <h3>$3000.00</h3>
+                        <a href=""><h3>1933 Willy's</h3></a>
+                        <p id="1"><a href="">Electrics & Gedgets</a></p>
+
+                    </div>
+                    <div class="adstime">
+                        <p>7 jan 10:11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
     </div>
-    <div class="col-sm-6">
-        <div class="adsinfo">
-            <h3>Price: $@Model.Classifieds_Item_Price</h3>
-            <h3>@Model.Classifieds_Item_Titel</h3>
-            <p>Post Time: @Model.Date</p>
-            <p>Location: @Model.Classifieds_Item_Location</p>
-            @*<hr />
-            <p><b>Condition:</b>New</p>
-            <p><b>Brand:</b>Apple</p>
-            <p><b>Features:</b>Camera, Dual SIM, GSM, Touch screen</p>
-            <p><b>Model:</b>iPhone 6</p>*@
-        </div>
-        <div class="adscontuct">
-            <button type="button" class="btn btn-warning">Click to show phone number</button>
-            @*<button type="button" class="btn btn-primary">Reply by email</button>*@
-        </div>
+    <div class="col-sm-1">
+
     </div>
 </div>
-<div class="col-sm-12">
-    <div class="description">
-        <h4>Description</h4><hr />
-        <p>@Model.Classifieds_Item_Description</p>
-    </div>
-</div>
 
-<div class="col-sm-12">
-    <div class="recomand">
-        <h4>Recommended Ads for You</h4><hr />
-    </div>
-</div>
-
-<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
-    <div class="ads2">
-        <div class="col-sm-3">
-            <div class="adsimg2">
-                <img src="~/Content/img/AdsImg/laptop.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-9">
-
-            <div class="ads1txt">
-                <h3>$3000.00</h3>
-                <a href=""><h3>1933 Willy's</h3></a>
-                <p id="1"><a href="">Electrics & Gedgets</a></p>
-
-            </div>
-            <div class="adstime">
-                <p>7 jan 10:11pm</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
-    <div class="ads2">
-        <div class="col-sm-3">
-            <div class="adsimg2">
-
-                <img src="~/Content/img/AdsImg/guitar.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-9">
-
-            <div class="ads1txt">
-                <h3>$3000.00</h3>
-                <a href=""><h3>1933 Willy's</h3></a>
-                <p id="1"><a href="">Electrics & Gedgets</a></p>
-
-            </div>
-            <div class="adstime">
-                <p>7 jan 10:11pm</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
-    <div class="ads2">
-        <div class="col-sm-3">
-            <div class="adsimg2">
-
-                <img src="~/Content/img/AdsImg/car.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-9">
-
-            <div class="ads1txt">
-                <h3>$3000.00</h3>
-                <a href=""><h3>1933 Willy's</h3></a>
-                <p id="1"><a href="">Electrics & Gedgets</a></p>
-
-            </div>
-            <div class="adstime">
-                <p>7 jan 10:11pm</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
-    <div class="ads2">
-        <div class="col-sm-3">
-            <div class="adsimg2">
-
-                <img src="~/Content/img/AdsImg/lava-a67-dual-sim-android-mobile-phone-medium_3a86d70832ad27694f49cea1aba8dd81.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-9">
-
-            <div class="ads1txt">
-                <h3>$3000.00</h3>
-                <a href=""><h3>1933 Willy's</h3></a>
-                <p id="1"><a href="">Electrics & Gedgets</a></p>
-
-            </div>
-            <div class="adstime">
-                <p>7 jan 10:11pm</p>
-            </div>
-        </div>
-    </div>
-</div>
 <script type="text/javascript">jssor_1_slider_init();</script>

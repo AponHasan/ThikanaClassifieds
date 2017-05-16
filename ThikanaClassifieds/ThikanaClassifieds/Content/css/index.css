@@ -84,6 +84,7 @@
     height:auto;
     width:100%;
     border-bottom:1px solid gray;
+        padding-left: 20px;
 }
 
 .FeaturedAds2
@@ -115,19 +116,20 @@
 .ads1
 {
     height:auto;
-    width:100%;
+    width:98%;
+    margin-left: 10px;
 
 
 }
 
 .ads1img img
 {
-    height:180px;
+    height:160px;
     width:100%;
 }
 .ads1txt
 {
-    height:150px;
+    height:110px;
     width:100%;
 }
 .adstime

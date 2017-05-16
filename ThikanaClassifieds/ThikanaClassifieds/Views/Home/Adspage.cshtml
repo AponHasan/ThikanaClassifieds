@@ -6,28 +6,107 @@
     ViewBag.Title = "Adspage";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
+<div class="col-sm-12">
+    <div class="col-sm-1">
 
-<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
-    <div class="ads2">
-        @foreach(var item in CItems)
-        {
-        <div class="col-sm-3">
-            <div class="adsimg2">
-                <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
-            </div>
-        </div>
-        <div class="col-sm-9">
-            <div class="ads1txt">
-                <h4>$@item.Classifieds_Item_Price</h4>
-                <h3>@item.Classifieds_Item_Titel</h3>
-                <p id="1">@item.Classifieds_Item_Location</p>
-            </div>
-            <div class="adstime">
-                <p>@item.Date</p>
-            </div>
-        </div>
-        }
     </div>
+    <div class="col-sm-3">
+        <div class="left-menu">
+            <div class="MenuLeftHeader">
+                All Categories
+            </div>
+
+            <ul>
+                @foreach(var item in CCategory)
+                { 
+                <li><a href="~/Home/Adspage/@item.Classifieds_Category_Id">@item.Classifieds_Category_Name</a></li>
+                @*<li><a href="#news">Electrics & Gedgets (76212)</a></li>
+                <li><a href="#contact">Real Estate (212)</a></li>
+                <li><a href="#about">Sports & Games (972)</a></li>
+                <li><a href="#home">Fshion & Beauty (1298)</a></li>
+                <li><a href="#news">Pets & Animals (76212)</a></li>
+                <li><a href="#contact">Home Appliances (1298)</a></li>
+                <li><a href="#about">Matrimony Services (76212)</a></li>
+                <li><a href="#home">Music & Arts (212)</a></li>
+                <li><a href="#news">Miscellaneous (1298)</a></li>
+                <li><a href="#contact">Job Openings (124)</a></li>
+                <li><a href="#about">Books & Magazines (972)</a></li>*@
+                }
+            </ul>
+        </div>
+        <div class="leftdrop">
+            <div class="dropdown1">
+                <button class="dropbtn1">Condition</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">New</label></a>
+                    <a href="#"><label><input type="checkbox" value="">used</label></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="leftdrop">
+            <div class="dropdown1">
+                <button class="dropbtn1">Posted By</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">Individual</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Dealer</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Reseller</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Manufacturer</label></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="leftdrop">
+            <div class="dropdown1">
+                <button class="dropbtn1">Brand</button>
+                <div class="dropdown-content1">
+                    <a href="#"><label><input type="checkbox" value="">Apple</label></a>
+                    <a href="#"><label><input type="checkbox" value="">HTC</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Micromax</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Nokia</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Samsung</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Acer</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Blackberry</label></a>
+                    <a href="#"><label><input type="checkbox" value="">Others</label></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7">
+        <div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+            <div class="ads2">
+                @foreach (var item in CItems)
+                {
+                    <div class="col-sm-3">
+                        <div class="adsimg2">
+                            <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>
 </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="ads1txt">
+                            <h4>$@item.Classifieds_Item_Price</h4>
+                            <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
+                            <p id="1">@item.Classifieds_Item_Location</p>
+                        </div>
+                        <div class="adstime">
+                            <p>@item.Date</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
