@@ -61,10 +61,6 @@ namespace ThikanaClassifieds.Controllers
                 myModel.Add(db.Classifieds_Items.Where(i => i.Classifieds_Category_Id == id).ToList());
                 return View(myModel);
             
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/master
         }
 
         public ActionResult ViewAds(int id)

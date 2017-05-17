@@ -117,23 +117,19 @@
 {
     height:auto;
     width:98%;
-    margin-left: 1%;
+    margin-left: 10px;
 
 
 }
 
 .ads1img img
 {
-    height:162px;
+    height:160px;
     width:100%;
 }
 .ads1txt
 {
-<<<<<<< HEAD
     
-=======
-    height:auto;
->>>>>>> origin/master
     width:100%;
 }
 .adstime

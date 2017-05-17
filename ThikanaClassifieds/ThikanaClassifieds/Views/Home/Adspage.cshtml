@@ -7,7 +7,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 <style>
-    .col-sm-3{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;}
+    .col-sm-3 {
+         margin: 0px 0px 0px 0px;
+         padding: 0px 0px 0px 0px
+    }
     .col-sm-9 {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
@@ -93,9 +96,8 @@
                         <div class="ads1txt well">
                             <h4>$@item.Classifieds_Item_Price</h4>
                             <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
-                            <p id="1">@item.Classifieds_Item_Location</p>
                             <div class="adstime">
-                                <p>@item.Date</p>
+                                <p>@item.Date &nbsp; &nbsp; @item.Classifieds_Item_Location</p>
                             </div>
                         </div>
                         
