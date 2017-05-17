@@ -88,3 +88,4 @@ D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\Sy
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb
+D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.csprojResolveAssemblyReference.cache

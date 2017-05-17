@@ -1,0 +1,53 @@
+﻿@model ThikanaClassifieds.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+        <body>
+            <div class="col-sm-12">
+            <div class="col-sm-5">
+
+            </div>
+            <div class="col-sm-4">
+                <div class="loginPanel" style="margin-top:30%;width:220px;height:250px; border:2px solid gray; background-color:gray;">
+                    <img style="width: 75%; margin-left:20px;" src="~/Content/img/logo.png" />
+                    <h1 style="margin:0px 0px 0px 20px;padding:0px 0px 0px 0px;">Classified</h1>
+                    @using (Html.BeginForm())
+                    {
+                        <div style="margin-left: 20px;">
+                            @Html.Label("Login Name")
+                        </div>
+                        <div style="margin-left: 20px;">
+                            @Html.TextBox("Name")
+                        </div>
+                        <div style="margin-left: 20px;">
+                            @Html.Label("Password")
+                        </div>
+                        <div style="margin-left: 20px;">
+                            @Html.TextBox("Password")
+                        </div>
+                        <div style="margin-left: 80px; margin-top:10px;">
+                            <input type="submit" value="Login" />
+                        </div>
+
+                    }
+                </div>
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+            </div>
+        </body>
+        </html>
+

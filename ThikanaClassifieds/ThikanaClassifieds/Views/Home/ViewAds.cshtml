@@ -340,33 +340,38 @@
             </div>
         </div>
 
-        @*<div class="col-sm-12">
+        <div class="col-sm-12">
             <div class="recomand">
                 <h4>Recommended Ads for You</h4><hr />
+               <p> @Model.Classifieds_Category.Classifieds_Category_Name</p>
             </div>
-        </div>*@
+        </div>
 
-        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+        <div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
             <div class="ads2">
+                @foreach(var item in @Model.Classifieds_Category.Classifieds_Items)
+                { 
                 <div class="col-sm-3">
                     <div class="adsimg2">
-                        <img src="~/Content/img/AdsImg/laptop.jpg" />
+                        <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
                     </div>
                 </div>
                 <div class="col-sm-9">
 
                     <div class="ads1txt">
-                        <h3>$3000.00</h3>
-                        <a href=""><h3>1933 Willy's</h3></a>
-                        <p id="1"><a href="">Electrics & Gedgets</a></p>
+                        <h3>Price: $@item.Classifieds_Item_Price</h3>
+                        <a href=""><h3>@item.Classifieds_Item_Titel</h3></a>
+                        <p id="1"><a href="">@item.Classifieds_Category.Classifieds_Category_Name</a></p>
 
                     </div>
                     <div class="adstime">
-                        <p>7 jan 10:11pm</p>
+                        <p>Location: @item.Classifieds_Item_Location</p>
+                        <p class="right">Location: @item.Date</p>
                     </div>
                 </div>
+                   }
             </div>
-        </div>*@
+        </div>
         @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
             <div class="ads2">
                 <div class="col-sm-3">
@@ -388,8 +393,8 @@
                     </div>
                 </div>
             </div>
-        </div>*@
-        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+        </div>
+        <div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
             <div class="ads2">
                 <div class="col-sm-3">
                     <div class="adsimg2">
@@ -410,8 +415,8 @@
                     </div>
                 </div>
             </div>
-        </div>*@
-        @*<div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
+        </div>
+        <div class="col-sm-12" style="background-color: white;height: auto;border: 1px solid gray;margin-top: 20px;">
             <div class="ads2">
                 <div class="col-sm-3">
                     <div class="adsimg2">
@@ -432,8 +437,8 @@
                     </div>
                 </div>
             </div>
-        </div>*@
-    </div>
+        </div>
+    </div>*@
     <div class="col-sm-1">
 
     </div>

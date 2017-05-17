@@ -55,14 +55,12 @@ namespace ThikanaClassifieds.Controllers
 
         public ActionResult Adspage(int id, string searchtext)
         {
-            if (searchtext != null && searchtext.Trim().Length > 0)
-            {
+            
                 List<Object> myModel = new List<object>();
                 myModel.Add(db.Classifieds_Category.ToList());
                 myModel.Add(db.Classifieds_Items.Where(i => i.Classifieds_Category_Id == id).ToList());
                 return View(myModel);
-            }
-            return View();
+            
         }
 
         public ActionResult ViewAds(int id)
