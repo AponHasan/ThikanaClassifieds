@@ -4,40 +4,61 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<div class="row">
-    <div class="col-sm-12">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="news-box">
-                    <ul class="news-list double-col">
 
-                        @foreach (var item in Model)
-                        {
-                            <li>
-                                @if (item.Classifieds_Item_Image.FirstOrDefault() != null)
-                                {<div class="cover-image">
-                                    <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
-                                </div>
-                                }
 
-                                <h4 class="news-heading">
-                                    <a href="/home/ViewAds/@item.Classifieds_Item_Id">
-                                        @item.Classifieds_Item_Titel
-                                    </a>
-                                    <a href="home/ViewAds/@item.Classifieds_Item_Id">
-
-                                        - @item.Classifieds_Category.Classifieds_Category_Name
-                                    </a>
-                                </h4>
-                                <h5 class="news-date">@item.Date</h5>
-                                <p class="news-detail">
-                                    @item.Classifieds_Item_Description
-                                </p>
-                            </li>
-                        }
-                    </ul>
+<div class="container-fluid">
+        <div class="col-sm-12" style="background-color:white; margin-top:20px;">
+            <div class="FeaturedAds1">
+                <div class="FeaturedAds">
+                    <h3>Trending Ads</h3>
                 </div>
+                <div class="col-sm-12" style=" margin-top: 10px; margin-bottom: 10px;">
+                    <div class="ads1">
+                       @foreach (var item in Model)
+                            {
+                            <div class="col-sm-3 well">
+                                <div class="ads1img">
+                                    @if (item.Classifieds_Item_Image.FirstOrDefault() != null)  
+                                    {
+                                    <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>                               
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-sm-9 well">
+                                <div class="ads1txt">
+                                    <h3>Price: $@item.Classifieds_Item_Price</h3>
+                                    <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
+                                    <p id="1">Location: @item.Classifieds_Item_Location</p>
+                                    <div class="adstime">
+                                        <p>@item.Date</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
-    </div>
+
+    
+
+
+
 </div>
+<script type="text/javascript">jssor_1_slider_init();</script>
+<script>
+    $("input[name=searchtext]").on("keyup", function () {
+        $.post("/home/AutoSuggest", { searchtext: $("input[name=searchtext]").val() }, function (result) {
+            $("input[name=searchtext]").autocomplete({
+                minLength: 0,
+                source: result
+            }).autocomplete("search", "");
+        }, "json");
+    });
+
+
+</script>

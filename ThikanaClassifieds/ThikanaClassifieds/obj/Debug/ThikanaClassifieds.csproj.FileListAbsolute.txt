@@ -88,4 +88,30 @@ D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\Sy
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb
+<<<<<<< HEAD
 D:\Mozammal\.net project\Classified\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.csprojResolveAssemblyReference.cache
+=======
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll.config
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\ThikanaClassifieds.pdb
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Helpers.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.dll
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.pdb
+C:\Users\user\Desktop\New\ThikanaClassifieds\ThikanaClassifieds\obj\Debug\ThikanaClassifieds.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master
