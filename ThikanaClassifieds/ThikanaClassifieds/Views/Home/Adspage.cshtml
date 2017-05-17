@@ -6,6 +6,13 @@
     ViewBag.Title = "Adspage";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
+<style>
+    .col-sm-3{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;}
+    .col-sm-9 {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+</style>
 <div class="col-sm-12">
     <div class="col-sm-1">
 
@@ -78,19 +85,20 @@
                 @foreach (var item in CItems)
                 {
                     <div class="col-sm-3">
-                        <div class="adsimg2">
+                        <div class="adsimg2 well">
                             <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>
 </div>
                     </div>
                     <div class="col-sm-9">
-                        <div class="ads1txt">
+                        <div class="ads1txt well">
                             <h4>$@item.Classifieds_Item_Price</h4>
                             <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
                             <p id="1">@item.Classifieds_Item_Location</p>
+                            <div class="adstime">
+                                <p>@item.Date</p>
+                            </div>
                         </div>
-                        <div class="adstime">
-                            <p>@item.Date</p>
-                        </div>
+                        
                     </div>
                 }
             </div>
