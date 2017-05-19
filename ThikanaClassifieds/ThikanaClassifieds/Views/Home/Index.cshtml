@@ -206,7 +206,7 @@
                       if(@item.Its_Premium=="1")
                       {                           
                     <div>
-                        <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>       
+                        <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image_Name" /></a>       
                                   
                     </div>
                         
@@ -330,19 +330,19 @@
             </div>
             <div class="col-sm-12" style=" margin-top: 10px; margin-bottom: 10px;">
                 <div class="ads1">
-                    @foreach (var item in CItems)
+                    @foreach (var item in CItems.OrderByDescending(c=>c.Classifieds_Item_Id))
                     {
                         
                         <div class="col-sm-3 well">
                             <div class="ads1img">
-                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>
+                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image_Name" /></a>
                             </div>
                         </div>
                         <div class="col-sm-9 well">
                             <div class="ads1txt">
                                 <h3>Price: $@item.Classifieds_Item_Price</h3>
                                 <p id="1">Location: @item.Classifieds_Category.Classifieds_Category_Name</p>
-                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>  
+                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Title</h3></a>  
                                 <div class="adstime">
                                     <p>@item.Date &nbsp; &nbsp; @item.Classifieds_Item_Location</p> 
                                 </div>                             

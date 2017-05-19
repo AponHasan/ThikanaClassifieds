@@ -18,14 +18,14 @@
                             <div class="ads1img">
                                 @if (item.Classifieds_Item_Image.FirstOrDefault() != null)
                                 {
-                                    <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" /></a>
+                                    <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"> <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image_Name" /></a>
                                 }
                             </div>
                         </div>
                         <div class="col-sm-9 well">
                             <div class="ads1txt">
                                 <h3>Price: $@item.Classifieds_Item_Price</h3>
-                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Titel</h3></a>
+                                <a href="~/Home/ViewAds/@item.Classifieds_Item_Id"><h3>@item.Classifieds_Item_Title</h3></a>
                                 <p id="1">Location: @item.Classifieds_Item_Location</p>
                                 <div class="adstime">
                                     <p>@item.Date</p>

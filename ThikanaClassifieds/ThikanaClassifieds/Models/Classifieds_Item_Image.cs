@@ -16,7 +16,7 @@ namespace ThikanaClassifieds.Models
     {
         public int Classifieds_Item_Image_Id { get; set; }
         public int Classifieds_Item_Id { get; set; }
-        public string Classifieds_Item_Image1 { get; set; }
+        public string Classifieds_Item_Image_Name { get; set; }
     
         public virtual Classifieds_Items Classifieds_Items { get; set; }
     }

@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ThikanaclassifiedsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Classifieds_ads">
+    <Key>
+      <PropertyRef Name="Classifieds_ads_Id" />
+    </Key>
+    <Property Name="Classifieds_ads_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Classifieds_ads_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Classifieds_ads_Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Classifieds_ads_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="Classifieds_Category">
     <Key>
       <PropertyRef Name="Classifieds_Category_Id" />
@@ -15,7 +24,7 @@
     </Key>
     <Property Name="Classifieds_Item_Image_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Classifieds_Item_Id" Type="Int32" Nullable="false" />
-    <Property Name="Classifieds_Item_Image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Classifieds_Item_Image_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Classifieds_Items" Relationship="Self.FK_Classifieds_Item_Image_Classifieds_Items" FromRole="Classifieds_Item_Image" ToRole="Classifieds_Items" />
   </EntityType>
   <EntityType Name="Classifieds_Items">
@@ -24,14 +33,15 @@
     </Key>
     <Property Name="Classifieds_Item_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Classifieds_Category_Id" Type="Int32" Nullable="false" />
-    <Property Name="Classifieds_Item_Titel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Classifieds_Item_Location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Classifieds_Item_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Classifieds_Item_Location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
     <Property Name="Classifieds_Item_Price" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Its_Premium" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Classifieds_Item_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Classifieds_Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Classifieds_Category" Relationship="Self.FK_Classifieds_Items_Classifieds_Category" FromRole="Classifieds_Items" ToRole="Classifieds_Category" />
     <NavigationProperty Name="Classifieds_Item_Image" Relationship="Self.FK_Classifieds_Item_Image_Classifieds_Items" FromRole="Classifieds_Items" ToRole="Classifieds_Item_Image" />
+    <Property Name="Classifieds_Item_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -42,16 +52,6 @@
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="test">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="img1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="img2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="img3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="img4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Classifieds_Items_Classifieds_Category">
     <End Role="Classifieds_Category" Type="Self.Classifieds_Category" Multiplicity="1" />
@@ -78,11 +78,11 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ThikanaclassifiedsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Classifieds_ads" EntityType="Self.Classifieds_ads" />
     <EntitySet Name="Classifieds_Category" EntityType="Self.Classifieds_Category" />
     <EntitySet Name="Classifieds_Item_Image" EntityType="Self.Classifieds_Item_Image" />
     <EntitySet Name="Classifieds_Items" EntityType="Self.Classifieds_Items" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="test" EntityType="Self.test" />
     <AssociationSet Name="FK_Classifieds_Items_Classifieds_Category" Association="Self.FK_Classifieds_Items_Classifieds_Category">
       <End Role="Classifieds_Category" EntitySet="Classifieds_Category" />
       <End Role="Classifieds_Items" EntitySet="Classifieds_Items" />

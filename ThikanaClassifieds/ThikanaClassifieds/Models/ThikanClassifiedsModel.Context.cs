@@ -25,10 +25,10 @@ namespace ThikanaClassifieds.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Classifieds_ads> Classifieds_ads { get; set; }
         public virtual DbSet<Classifieds_Category> Classifieds_Category { get; set; }
         public virtual DbSet<Classifieds_Item_Image> Classifieds_Item_Image { get; set; }
         public virtual DbSet<Classifieds_Items> Classifieds_Items { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<test> test { get; set; }
     }
 }

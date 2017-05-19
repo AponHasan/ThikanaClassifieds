@@ -12,12 +12,11 @@ namespace ThikanaClassifieds.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class test
+    public partial class Classifieds_ads
     {
-        public int id { get; set; }
-        public string img1 { get; set; }
-        public string img2 { get; set; }
-        public string img3 { get; set; }
-        public string img4 { get; set; }
+        public int Classifieds_ads_Id { get; set; }
+        public string Classifieds_ads_Title { get; set; }
+        public string Classifieds_ads_Link { get; set; }
+        public string Classifieds_ads_Image { get; set; }
     }
 }

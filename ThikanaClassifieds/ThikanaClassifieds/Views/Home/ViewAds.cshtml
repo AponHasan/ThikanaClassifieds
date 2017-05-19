@@ -230,8 +230,8 @@
                             @foreach (var item in Model.Classifieds_Item_Image)
                             {
                                 <div>
-                                    <img data-u="image" src="~/@item.Classifieds_Item_Image1" />
-                                    <img data-u="thumb" src="~/@item.Classifieds_Item_Image1" />
+                                    <img data-u="image" src="~/@item.Classifieds_Item_Image_Name" />
+                                    <img data-u="thumb" src="~/@item.Classifieds_Item_Image_Name" />
                                 </div>
 
                             }
@@ -259,7 +259,7 @@
             <div class="col-sm-6">
                 <div class="adsinfo">
                     <h3>Price: $@Model.Classifieds_Item_Price</h3>
-                    <h3>@Model.Classifieds_Item_Titel</h3>
+                    <h3>@Model.Classifieds_Item_Title</h3>
                     <p>Post Time: @Model.Date</p>
                     <p>Location: @Model.Classifieds_Item_Location</p>
                 </div>
@@ -288,14 +288,14 @@
                 {
                     <div class="col-sm-3">
                         <div class="adsimg2 well">
-                            <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image1" />
+                            <img src="~/@item.Classifieds_Item_Image.FirstOrDefault().Classifieds_Item_Image_Name" />
                         </div>
                     </div>
                     <div class="col-sm-9">
 
                         <div class="ads1txt well">
                             <h3>Price: $@item.Classifieds_Item_Price</h3>
-                            <a href=""><h3>@item.Classifieds_Item_Titel</h3></a>
+                            <a href=""><h3>@item.Classifieds_Item_Title</h3></a>
                             <p id="1"><a href="">@item.Classifieds_Category.Classifieds_Category_Name</a></p>
                             <div class="adstime">
                                 <p>@item.Date &nbsp; &nbsp; Location: @item.Classifieds_Item_Location</p>

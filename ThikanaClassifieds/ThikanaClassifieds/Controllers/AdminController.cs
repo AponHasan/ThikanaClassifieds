@@ -256,12 +256,12 @@ namespace ThikanaClassifieds.Controllers
                 if (ModelState.IsValid)
                 {
                     var files = this.HttpContext.Request.Files;
-                    citems.Date = DateTime.Now;
+                    //citems.Date = DateTime.Now;
                     db.Classifieds_Items.Add(citems);
                     var x = FileUploader.FileUpload(this.ControllerContext);
                     foreach (var item in x)
                     {
-                        db.Classifieds_Item_Image.Add(new Models.Classifieds_Item_Image() { Classifieds_Items = citems, Classifieds_Item_Image1 = item });
+                        db.Classifieds_Item_Image.Add(new Models.Classifieds_Item_Image() { Classifieds_Items = citems, Classifieds_Item_Image_Name = item });
                     }
                     db.SaveChanges();
                 }
@@ -323,7 +323,7 @@ namespace ThikanaClassifieds.Controllers
                 var Citem = db.Classifieds_Items.Find(id);
                 foreach (var item in Citem.Classifieds_Item_Image.ToList())
                 {
-                    FileUploader.DeleteFile(this.ControllerContext, item.Classifieds_Item_Image1);
+                    FileUploader.DeleteFile(this.ControllerContext, item.Classifieds_Item_Image_Name);
                     db.Classifieds_Item_Image.Remove(item);
                 }
                 db.Classifieds_Items.Remove(Citem);

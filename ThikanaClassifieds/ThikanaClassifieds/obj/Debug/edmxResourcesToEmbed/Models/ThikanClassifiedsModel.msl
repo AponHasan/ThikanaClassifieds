@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ThikanaclassifiedsModelStoreContainer" CdmEntityContainer="ThikanaclassifiedsEntities">
+    <EntitySetMapping Name="Classifieds_ads">
+      <EntityTypeMapping TypeName="ThikanaclassifiedsModel.Classifieds_ads">
+        <MappingFragment StoreEntitySet="Classifieds_ads">
+          <ScalarProperty Name="Classifieds_ads_Id" ColumnName="Classifieds_ads_Id" />
+          <ScalarProperty Name="Classifieds_ads_Title" ColumnName="Classifieds_ads_Title" />
+          <ScalarProperty Name="Classifieds_ads_Link" ColumnName="Classifieds_ads_Link" />
+          <ScalarProperty Name="Classifieds_ads_Image" ColumnName="Classifieds_ads_Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Classifieds_Category">
       <EntityTypeMapping TypeName="ThikanaclassifiedsModel.Classifieds_Category">
         <MappingFragment StoreEntitySet="Classifieds_Category">
@@ -15,16 +25,17 @@
         <MappingFragment StoreEntitySet="Classifieds_Item_Image">
           <ScalarProperty Name="Classifieds_Item_Image_Id" ColumnName="Classifieds_Item_Image_Id" />
           <ScalarProperty Name="Classifieds_Item_Id" ColumnName="Classifieds_Item_Id" />
-          <ScalarProperty Name="Classifieds_Item_Image1" ColumnName="Classifieds_Item_Image" />
+          <ScalarProperty Name="Classifieds_Item_Image_Name" ColumnName="Classifieds_Item_Image_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Classifieds_Items">
       <EntityTypeMapping TypeName="ThikanaclassifiedsModel.Classifieds_Items">
         <MappingFragment StoreEntitySet="Classifieds_Items">
+          <ScalarProperty Name="Classifieds_Item_Phone" ColumnName="Classifieds_Item_Phone" />
           <ScalarProperty Name="Classifieds_Item_Id" ColumnName="Classifieds_Item_Id" />
           <ScalarProperty Name="Classifieds_Category_Id" ColumnName="Classifieds_Category_Id" />
-          <ScalarProperty Name="Classifieds_Item_Titel" ColumnName="Classifieds_Item_Titel" />
+          <ScalarProperty Name="Classifieds_Item_Title" ColumnName="Classifieds_Item_Title" />
           <ScalarProperty Name="Classifieds_Item_Location" ColumnName="Classifieds_Item_Location" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Classifieds_Item_Price" ColumnName="Classifieds_Item_Price" />
@@ -41,17 +52,6 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="test">
-      <EntityTypeMapping TypeName="ThikanaclassifiedsModel.test">
-        <MappingFragment StoreEntitySet="test">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="img1" ColumnName="img1" />
-          <ScalarProperty Name="img2" ColumnName="img2" />
-          <ScalarProperty Name="img3" ColumnName="img3" />
-          <ScalarProperty Name="img4" ColumnName="img4" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

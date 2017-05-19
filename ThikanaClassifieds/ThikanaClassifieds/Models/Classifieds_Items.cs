@@ -21,12 +21,13 @@ namespace ThikanaClassifieds.Models
     
         public int Classifieds_Item_Id { get; set; }
         public int Classifieds_Category_Id { get; set; }
-        public string Classifieds_Item_Titel { get; set; }
+        public string Classifieds_Item_Title { get; set; }
         public string Classifieds_Item_Location { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public string Classifieds_Item_Price { get; set; }
         public string Its_Premium { get; set; }
         public string Classifieds_Item_Description { get; set; }
+        public string Classifieds_Item_Phone { get; set; }
     
         public virtual Classifieds_Category Classifieds_Category { get; set; }
         public virtual ICollection<Classifieds_Item_Image> Classifieds_Item_Image { get; set; }
